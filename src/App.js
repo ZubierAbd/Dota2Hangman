@@ -23,14 +23,14 @@ function App() {
 
 
   const [playable, setPlayable] = useState(true);
-  const [correctLetters, setCorrectLetters] = useState([])
+  const [correctLetters, setCorrectLetters] = useState([" "])
   const [wrongLetters, setWrongLetters] = useState([])
   const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
     const handleKeydown = event => {
       const { key, keyCode } = event;
-      if (playable && ((keyCode >= 65 && keyCode <= 90) || keyCode == 32)) {
+      if (playable && ((keyCode >= 65 && keyCode <= 90) || keyCode === 32)) {
         const letter = key.toLowerCase();
         if (selectedWord.includes(letter)) {
           if (!correctLetters.includes(letter)) {
@@ -73,7 +73,7 @@ function App() {
 
       </div>
       <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
-      {showNotification && <Notification />}
+      <Notification showNotification={showNotification} />
 
     </>
   );

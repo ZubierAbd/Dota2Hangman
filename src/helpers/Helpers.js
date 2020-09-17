@@ -25,3 +25,10 @@ export function checkWin(correct, wrong, word) {
 
     return status
 }
+
+export function toTitleCase(str) {
+    let ns = ''
+    let firstLetter = str.charAt(0).toUpperCase();
+    ns += firstLetter + str.slice(1)
+    return ns
+}

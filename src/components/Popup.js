@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { checkWin } from '../helpers/Helpers'
+import { checkWin, toTitleCase } from '../helpers/Helpers'
 
 const PopUp = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAgain }) => {
     let finalMessage = ''
@@ -11,7 +11,7 @@ const PopUp = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
         playable = false
     } else if (checkWin(correctLetters, wrongLetters, selectedWord) === 'lose') {
         finalMessage = 'Unfortunately You have lost the game'
-        finalMessageRevealWord = `The word was .... ${selectedWord}`
+        finalMessageRevealWord = `The word was .... ${toTitleCase(selectedWord)}`
         playable = false
     }
 

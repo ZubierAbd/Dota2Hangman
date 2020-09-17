@@ -3,13 +3,14 @@
   }
   
   body {
-    background-color: rgb(62, 19, 90);
+    background-image:  url('./background.jpg');
+    background-position: center;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
     margin: 0;
     overflow: hidden;
   }
@@ -17,13 +18,18 @@
   h1 {
     margin: 20px 0 0;
   }
+
+  .center-text{
+    text-align: center;
+  }
   
   .game-container {
     padding: 20px 30px;
     position: relative;
     margin: auto;
-    height: 350px;
-    width: 450px;
+    height: 60vh;
+    width: 35vw;
+    background-color: rgba(0, 0, 0, 0.7);
   }
   
   .figure-container {
@@ -63,7 +69,7 @@
   }
   
   .letter {
-    border-bottom: 3px solid #2980b9;
+    border-bottom: 3px solid #1cd41c;
     display: inline-flex;
     font-size: 30px;
     align-items: center;
@@ -87,7 +93,7 @@
   }
   
   .popup {
-    background: #2980b9;
+    background: #262e33;
     border-radius: 5px;
     box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -97,7 +103,7 @@
   .popup button {
     cursor: pointer;
     background-color: #fff;
-    color: #2980b9;
+    color: #262e33;
     border: 0;
     margin-top: 20px;
     padding: 12px 20px;
