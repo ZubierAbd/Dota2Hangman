@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     const handleKeydown = event => {
       const { key, keyCode } = event;
-      if (playable && keyCode >= 65 && keyCode <= 90) {
+      if (playable && ((keyCode >= 65 && keyCode <= 90) || keyCode == 32)) {
         const letter = key.toLowerCase();
         if (selectedWord.includes(letter)) {
           if (!correctLetters.includes(letter)) {
